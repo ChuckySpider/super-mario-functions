@@ -13,6 +13,30 @@ function setup() {
 function draw() {
   background(120, 190, 255); // sky
 
+  fill('yellow');
+  rect(100, 145, 50, 50);
+  fill('orange')
+  textSize(45);
+  text('?', 110, 185);
+  
+  fill('yellow');
+  rect(250, 145, 50, 50);
+  fill('orange')
+  textSize(45);
+  text('?', 260, 185);
+  
+  fill('yellow');
+  rect(400, 145, 50, 50);
+  fill('orange')
+  textSize(45);
+  text('?', 410, 185);
+  
+  fill('brown');
+  rect(464, 303, 20, 27);
+  
+  fill('brown');
+  triangle(450, 315, 500, 315, 475, 280);
+  
   // ground
   fill(60, 200, 90);
   rect(0, 330, width, 70);
@@ -57,7 +81,7 @@ function updateJump() {
 
   let t = jumpFrame / 30;
   let height = sin(t * PI) * 120;
-  y = 300 - height;
+  y = 325 - height;
 
   if (jumpFrame >= 30) {
     jumping = false;
@@ -69,6 +93,10 @@ function updateJump() {
 // 🎨 DRAW PLAYER
 // ==================================================
 function drawPlayer() {
-  fill(255, 60, 60);
-  rect(x, y, 40, 40);
+  fill('red');
+  rect(x, y-30, 33, 15);
+  fill(250,180,140);
+  rect(x, y-14, 33, 17);
+  fill('blue');
+  rect(x+3, y+3, 28, 28);
 }
